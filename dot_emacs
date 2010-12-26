@@ -18,7 +18,7 @@
  '(ps-printer-name-option "-P ML1780")
  '(scheme-program-name "guile")
  '(verilog-auto-newline nil)
- '(verilog-minimum-comment-distance 9999999999))
+ '(verilog-minimum-comment-distance 999999999))
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.

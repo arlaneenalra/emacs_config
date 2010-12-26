@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+no lib '.';
+
+use strict;
+use warnings;
+use diagnostics;
+
+use FindBin;
+
+use lib "$FindBin::Bin/lib";
+
+use Carp;

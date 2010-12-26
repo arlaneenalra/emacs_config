@@ -1,0 +1,49 @@
+;; 
+;; Hardlink this to ~/.emacs
+;;
+;;
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(c-basic-offset 4)
+ '(indent-tabs-mode nil)
+ '(jde-built-class-path (quote ("./build/prod/" "./src")))
+ '(jde-sourcepath (quote ("./src/" "./test/")))
+ '(perl-tab-always-indent t)
+ '(pr-txt-name (quote ML1780))
+ '(ps-printer-name t)
+ '(ps-printer-name-option "-P ML1780")
+ '(scheme-program-name "guile")
+ '(verilog-auto-newline nil)
+ '(verilog-minimum-comment-distance 9999999999))
+
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t (:stipple nil :background "#000000" :foreground "grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :family "courier")))))
+
+(defun byte-compile-if-newer-and-load (file)
+     "Byte compile file.el if newer than file.elc"
+         (if (file-newer-than-file-p (concat file ".el")
+				           (concat file ".elc"))
+	       (byte-compile-file (concat file ".el")))
+	     (load file))
+
+(byte-compile-if-newer-and-load "~/emacs/startup")
+
+
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+;; (when
+;;     (load
+;;      (expand-file-name "~/.emacs.d/elpa/package.el"))
+;;   (package-initialize))

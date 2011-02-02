@@ -124,5 +124,10 @@
 
 (eval-after-load "cperl-mode"
   '(add-hook 'cperl-mode-hook 'perlcritic-mode))
-(eval-after-load "perl-mode"
-  '(add-hook 'perl-mode-hook 'perlcritic-mode))
+
+;;; cperl-mode is preferred to perl-mode                                        
+;;; "Brevity is the soul of wit" <foo at acm.org>                               
+(defalias 'perl-mode 'cperl-mode)
+
+;; (eval-after-load "perl-mode"
+;;   '(add-hook 'perl-mode-hook 'perlcritic-mode))

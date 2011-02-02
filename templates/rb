@@ -3,3 +3,7 @@
 # Establish a library directory for the script
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), 'lib')
 
+require 'rubygems'
+require 'bundler'
+Bundler.setup
+

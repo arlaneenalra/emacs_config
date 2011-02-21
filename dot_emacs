@@ -9,6 +9,8 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(c-basic-offset 4)
+ '(cperl-indent-level 4)
+ '(haml-indent-offset 4)
  '(indent-tabs-mode nil)
  '(jde-built-class-path (quote ("./build/prod/" "./src")))
  '(jde-sourcepath (quote ("./src/" "./test/")))
@@ -16,7 +18,9 @@
  '(pr-txt-name (quote ML1780))
  '(ps-printer-name t)
  '(ps-printer-name-option "-P ML1780")
+ '(ruby-indent-level 4)
  '(scheme-program-name "guile")
+ '(tab-width 4)
  '(verilog-auto-newline nil)
  '(verilog-minimum-comment-distance 999999999))
 
@@ -25,9 +29,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
-;; '(default ((t (:stipple nil :background "#000000" :foreground "grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :family "courier")))))
-
- '(default ((t (:stipple nil :background "#000000" :foreground "grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal )))))
+ '(default ((t (:stipple nil :background "#000000" :foreground "grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal)))))
 
 (defun byte-compile-if-newer-and-load (file)
      "Byte compile file.el if newer than file.elc"

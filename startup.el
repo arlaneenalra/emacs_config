@@ -40,7 +40,7 @@
 
 
 
-;(setq default-major-mode 'text-mode )
+(setq-default major-mode 'text-mode )
 ;(setq default-fill-column 78)
 
 
@@ -131,3 +131,7 @@
 
 ;; (eval-after-load "perl-mode"
 ;;   '(add-hook 'perl-mode-hook 'perlcritic-mode))
+;;
+
+;; haml-mode
+(byte-compile-if-newer-and-load "~/emacs/haml-mode/haml-mode.el")

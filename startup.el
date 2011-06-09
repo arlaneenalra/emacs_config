@@ -1,16 +1,15 @@
 
 (require 'site-gentoo)
 
-(setq default-frame-alist 
-      '( 
-	;;(font .  "-Misc-Fixed-Medium-R-Normal--20-200-75-75-C-100-ISO8859-1")
-;;	(font . "-*-fixed-*-*-normal-*-18-*-*-*-*-*-iso8859-*")
-      	(width . 80)
-	(height . 50)
-;;	(background-color . "black")
-;;	(foreground-color . "green")
-	))
-
+;; (setq default-frame-alist 
+;;       '( 
+;; 	;;(font .  "-Misc-Fixed-Medium-R-Normal--20-200-75-75-C-100-ISO8859-1")
+;; ;;	(font . "-*-fixed-*-*-normal-*-18-*-*-*-*-*-iso8859-*")
+;; ;;     	(width . 80)
+;; ;;	(height . 50)
+;; 	(background-color . "black")
+;; 	(foreground-color . "green")
+;; 	))
 (require 'longlines )
 (defun human-minor-modes ()
 	"A function to enable a few nice minor modes."
@@ -143,3 +142,8 @@
 
 ;; haml-mode
 (byte-compile-if-newer-and-load "~/emacs/haml-mode/haml-mode.el")
+
+(require 'color-theme)
+(color-theme-initialize)
+(eval-after-load "color-theme" '(when window-system (color-theme-parus)))
+

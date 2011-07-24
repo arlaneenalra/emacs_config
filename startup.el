@@ -148,7 +148,6 @@
 
 ;; insert lorem-ipsum
 (byte-compile-if-newer-and-load "~/emacs/lorem-ipsum.el")
-(require 'lorem-ipsum)
 
 (require 'color-theme)
 

@@ -143,7 +143,15 @@
 ;; haml-mode
 (byte-compile-if-newer-and-load "~/emacs/haml-mode/haml-mode.el")
 
+;; flex-mode
+(byte-compile-if-newer-and-load "~/emacs/modes/flex-mode.el")
+
+;; insert lorem-ipsum
+(byte-compile-if-newer-and-load "~/emacs/lorem-ipsum.el")
+(require 'lorem-ipsum)
+
 (require 'color-theme)
+
 (color-theme-initialize)
 (eval-after-load "color-theme" '(when window-system (color-theme-parus)))
 

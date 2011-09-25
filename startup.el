@@ -98,12 +98,12 @@
 (add-to-list 'auto-mode-alist '("\\.pir\\'" . pir-mode))
 
 ;; setup mason
-(require 'mmm-auto)
-(setq mmm-global-mode 'maybe)
-(add-to-list 'auto-mode-alist '("\\.mas\\'" . html-mode))
-(mmm-add-mode-ext-class 'html-mode "\\.mas\\'" 'mason)
-(add-to-list 'auto-mode-alist '("\\.html\\'" . html-mode))
-(mmm-add-mode-ext-class 'html-mode "\\.html\\'" 'mason)
+;; (require 'mmm-auto)
+;; (setq mmm-global-mode 'maybe)
+;; (add-to-list 'auto-mode-alist '("\\.mas\\'" . html-mode))
+;; (mmm-add-mode-ext-class 'html-mode "\\.mas\\'" 'mason)
+;; (add-to-list 'auto-mode-alist '("\\.html\\'" . html-mode))
+;; (mmm-add-mode-ext-class 'html-mode "\\.html\\'" 'mason)
 
 ;; (byte-compile-if-newer-and-load "~/emacs/clojure/clojure-mode")
 

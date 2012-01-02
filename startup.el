@@ -152,7 +152,8 @@
 (require 'color-theme)
 
 (color-theme-initialize)
-(eval-after-load "color-theme" '(when window-system (color-theme-dark-laptop)))
+;;(eval-after-load "color-theme" '(when window-system (color-theme-dark-laptop)))
+(eval-after-load "color-theme" '(when window-system (color-theme-deep-blue)))
 
 ;; Setup org-mode
 ;; (require 'org-install)

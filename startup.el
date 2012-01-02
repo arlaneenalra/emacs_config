@@ -152,7 +152,7 @@
 (require 'color-theme)
 
 (color-theme-initialize)
-(eval-after-load "color-theme" '(when window-system (color-theme-parus)))
+(eval-after-load "color-theme" '(when window-system (color-theme-dark-laptop)))
 
 ;; Setup org-mode
 ;; (require 'org-install)

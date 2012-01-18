@@ -9,18 +9,15 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(c-basic-offset 4)
- '(cperl-indent-level 4)
- '(haml-indent-offset 4)
- '(indent-tabs-mode nil)
+ '(cerl-close-paren-offset -4)
+ '(erl-continued-statement-offset 4)
  '(jde-built-class-path (quote ("./build/prod/" "./src")))
  '(jde-sourcepath (quote ("./src/" "./test/")))
  '(perl-tab-always-indent t)
  '(pr-txt-name (quote ML1780))
  '(ps-printer-name t)
  '(ps-printer-name-option "-P ML1780")
- '(ruby-indent-level 4)
  '(scheme-program-name "guile")
- '(tab-width 2)
  '(verilog-auto-newline nil)
  '(verilog-minimum-comment-distance 999999999))
 

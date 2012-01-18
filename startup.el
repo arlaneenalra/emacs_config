@@ -22,7 +22,8 @@
   (interactive "")
   (human-minor-modes )
   (flyspell-mode 1)
-;;  (auto-fill-mode 1))
+  ;;  (auto-fill-mode 1))
+  (linum-mode)
   (longlines-mode 1)
   (longlines-show-hard-newlines )
 )
@@ -161,3 +162,16 @@
 ;; (define-key global-map "\C-cl" 'org-store-link)
 ;; (define-key global-map "\C-ca" 'org-agenda)
 ;; (setq org-log-done t)
+
+;; Relative line numbers in linum-mode
+;; http://stackoverflow.com/questions/6874516/relative-line-numbers-in-emacs
+(defvar my-linum-current-line-number 0)
+(setq linum-format 'my-linum-relative-line-numbers)
+
+(defun my-linum-relative-line-numbers (line-number)
+  (number-to-string (- line-number my-linum-current-line-number)))
+
+(defadvice linum-update (around my-linum-update)
+  (let ((my-linum-current-line-number (line-number-at-pos)))
+    ad-do-it))
+(ad-activate 'linum-update)

@@ -40,26 +40,30 @@
 (add-hook 'emacs-lisp-mode-hook 'human-minor-modes)
 (add-hook 'c-mode-hook 'human-minor-modes)
 
-;(byte-compile-if-newer-and-load "~/emacs/modes/latex-tools-mode")
-;(byte-compile-if-newer-and-load "~/emacs/modes/tex-mode")
-
-
-
 (setq-default major-mode 'text-mode )
 ;(setq default-fill-column 78)
 
 
+(defun set-fullscreen (full-or-not)
+  "Use set-frame-parameter to make emacs fullscreen.  When passed a non-nil value, set-frame-parameter to fullboth (fullscreen)"
+  (set-frame-parameter nil 'fullscreen 
+                       (if full-or-not
+                           'fullboth
+                            nil)))
+
+
 ;; Full screen key bindings
-(defun toggle-fullscreen () 
-  (interactive) 
-  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen) 
-                                           nil 
-					 'fullboth)))
-
-
-
+(defun toggle-fullscreen ()
+  (interactive)
+  (let
+      ((full-or-not    (if (frame-parameter nil 'fullscreen) nil 1)))
+    
+    (set-fullscreen full-or-not)
+    (menu-bar-mode (if full-or-not 0 1))
+    (tool-bar-mode (if full-or-not 0 1))
+    full-or-not))
+      
 (global-set-key [(meta return)] 'toggle-fullscreen)
-
 
 
 ;; Let's do some boiler plate stuff
@@ -179,3 +183,5 @@
   (let ((my-linum-current-line-number (line-number-at-pos)))
     ad-do-it))
 (ad-activate 'linum-update)
+
+

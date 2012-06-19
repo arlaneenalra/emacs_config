@@ -4,20 +4,35 @@
 ;;
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(c-basic-offset 4)
- '(cerl-close-paren-offset -4)
- '(erl-continued-statement-offset 4)
+ '(clojure-swank-command "echo \"$HOME/.local/lein/lein jack-in %s\" | $SHELL -l")
+ '(cperl-close-paren-offset -4)
+ '(cperl-continued-statement-offset 4)
+ '(cperl-indent-level 4)
+ '(cperl-indent-parens-as-block t)
+ '(cperl-tab-always-indent t)
+ '(haml-indent-offset 4)
+ '(indent-tabs-mode nil)
+ '(inferior-lisp-program "clojure-1.3")
+ '(ispell-program-name "/usr/bin/ispell")
  '(jde-built-class-path (quote ("./build/prod/" "./src")))
  '(jde-sourcepath (quote ("./src/" "./test/")))
+ '(package-archives (quote (("marmalade" . "http://marmalade-repo.org/packages/") ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(perl-tab-always-indent t)
  '(pr-txt-name (quote ML1780))
  '(ps-printer-name t)
  '(ps-printer-name-option "-P ML1780")
+ '(quack-default-program "csi")
+ '(quack-fontify-style (quote emacs))
+ '(rst-level-face-base-light 20)
+ '(rst-level-face-step-light 7)
+ '(ruby-indent-level 2)
  '(scheme-program-name "guile")
+ '(tab-width 2)
  '(verilog-auto-newline nil)
  '(verilog-minimum-comment-distance 999999999))
 
@@ -39,12 +54,11 @@
 
 
 
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-;; (when
-;;     (load
-;;      (expand-file-name "~/.emacs.d/elpa/package.el"))
-;;   (package-initialize))
+
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "courier" :foundry "adobe" :slant normal :weight normal :height 150 :width normal)))))
